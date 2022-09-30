@@ -20,8 +20,4 @@
     <ProjectReference Include="..\Repositorio\LayerBusiness.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MIddleware\" />
-  </ItemGroup>
-
 </Project>

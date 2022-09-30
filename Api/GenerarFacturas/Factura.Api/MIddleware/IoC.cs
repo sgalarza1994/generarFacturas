@@ -25,7 +25,7 @@ namespace Factura.Api.MIddleware
 
 
 
-        public static IServiceCollection AddCors(this IServiceCollection services)
+        public static IServiceCollection AddCorsLocal(this IServiceCollection services)
         {
 
             services.AddCors(options => options.AddPolicy("MyPolicy", builder =>
