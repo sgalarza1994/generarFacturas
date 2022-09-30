@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Factura.Api.MIddleware;
 namespace Factura.Api
 {
     public class Startup
@@ -27,6 +27,10 @@ namespace Factura.Api
         {
 
             services.AddControllers();
+
+            services.AddDependecy(Configuration);
+            services.AddCorsLocal();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Factura.Api", Version = "v1" });
@@ -42,7 +46,7 @@ namespace Factura.Api
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Factura.Api v1"));
             }
-
+            app.UseCors("MyPolicy");
             app.UseRouting();
 
             app.UseAuthorization();

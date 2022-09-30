@@ -13,7 +13,7 @@ namespace LayerAccess.Admin
         [Key]
         public int UserId { get; set; }
         [Column(TypeName = "varchar(100)")]
-        public string UserName { get; set; }
+        public string Email { get; set; }
 
         [Column(TypeName = "varchar(100)")]
         public string Password { get; set; }

@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Repositorio\LayerBusiness.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Repositorio\LayerBusiness.csproj" />
+    <Folder Include="MIddleware\" />
   </ItemGroup>
 
 </Project>

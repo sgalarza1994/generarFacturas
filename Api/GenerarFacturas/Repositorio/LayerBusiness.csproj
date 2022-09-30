@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AccesoDato\LayerAccess.csproj" />
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+    <ProjectReference Include="..\ViewModel\ViewModel.csproj" />
   </ItemGroup>
 
 </Project>

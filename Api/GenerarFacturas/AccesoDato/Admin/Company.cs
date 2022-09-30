@@ -24,6 +24,11 @@ namespace LayerAccess.Admin
         [Column(TypeName = "varchar(100)")]
         public string Email { get; set; }
 
+        [ForeignKey("UserId")]
+        public int UserId { get; set; }
+
+        public User User { get; set; }
+
         public List<Invoice> Invoices { get; set; }
     }
 }
