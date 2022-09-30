@@ -1,0 +1,223 @@
+
+
+/*html {
+  height: 100%;
+}*/
+
+h1{
+  font-weight: bold;
+}
+h2{
+  font-weight: bold;
+}
+h3{
+  font-weight: bold;
+}
+h4{
+  font-weight: bold;
+}
+h5{
+  font-weight: bold;
+  
+}
+
+/*h1 h2 h3 h4 h5 h6{
+  font-weight: bold;
+  color: red;
+}*/
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+
+}
+
+.bg-color-primary {
+  background-color: #117A02 !important
+}
+
+.bg-color-gray {
+  background-color: #bfb8af;
+}
+
+.bg-color-primary-light {
+  background-color: #0084b3;
+}
+
+.text-primary-portal {
+  color: #0040ff;
+}
+
+.text-secondary-portal {
+  color: #bfb8af;
+}
+
+.mat-icon {
+  color: white !important;
+}
+
+.mat-icon-gren {
+  color: #03454b  !important;
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 9999 !important;
+}
+
+.Btn_F_Eliminar {
+  background-color: blue;
+  color: white;
+}
+
+.Btn_F_Close {
+  background-color: darkgray !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #03454b !important;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.btn-secondary {
+  background-color: #bfb8af !important;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border: 0ch;
+}
+
+.mat-header-cell {
+  background-color: #bfb8af !important;
+  font-weight: bold;
+  color: white;
+}
+
+table.mat-table th,
+table.mat-table td {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.customClass {
+  min-width: max-content !important;
+}
+
+.modal-header{
+  background: #117A02;
+  color: white;
+}
+
+
+/*INI ESTILOS PARA CONTROLES mat-form-field*/
+
+/*Pantalla ingreso pedidos*/
+#mffIngCliente > div {
+  padding-bottom: 0;
+}
+
+  #mffIngCliente > div > div div.mat-form-field-infix {
+    border-top: 0.5em solid transparent;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+#mffIngContrato > div {
+  padding-bottom: 0;
+}
+
+  #mffIngContrato > div > div div.mat-form-field-infix {
+    border-top: 0.5em solid transparent;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+/*Pantalla analisis rentabilidad*/
+#mffRentabilidad > div {
+  padding-bottom: 0;
+}
+
+  #mffRentabilidad > div > div div.mat-form-field-infix {
+    border-top: 0.5em solid transparent;
+    padding: 0.5em 0 0.5em 0;
+  }
+
+
+/*FIN ESTILOS PARA CONTROLES mat-form-field*/
+
+/*INI ESTILOS PARA CONTROLES mat-expansion-panel*/
+
+/*Pantalla consulta pedidos*/
+#mepConsFiltros .mat-expansion-panel-body {
+  padding-bottom: 0;
+}
+
+/*FIN ESTILOS PARA CONTROLES mat-expansion-panel*/
+
+.estado_Aprobado{
+  color: #6ba511;
+}
+.estado_Pendiente_Pago{
+  color: red;
+}
+.estado_Despacho_Parcial{
+  color: blue;
+}
+.faltante_Negativo{
+  color: red;
+}
+
+
+::ng-deep modal-container  {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+.centrado{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+
+/* NO EDITAR NI BORRAR ESTA SECCION */
+/* INI section jpdev */
+.ColorRed{
+  color: red;
+}
+
+.dropdown-menu-right {
+  right: 0 !important;
+  left: auto !important;
+}
+
+.displayNone {
+  display: none;
+}
+
+.icon-color {
+  color: #03454b !important;
+}
+
+.form-field-padding-0 > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0;
+  align-items:center;
+}
+.form-field-padding-0 >.mat-form-field-wrapper > .mat-form-field-flex {
+
+  align-items:center;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb{
+  background-color: #03454b !important;
+
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: #034b36a6 !important;
+}
+
+/* FIN section jpdev */
+
+
