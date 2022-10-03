@@ -1,3 +1,9 @@
+<div *ngIf="loaderService.isLoading | async" class="loader-container">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+
+
+
 <app-header></app-header>
 <div class="container-fluid" style="min-height: 70vh;">
     <router-outlet></router-outlet>

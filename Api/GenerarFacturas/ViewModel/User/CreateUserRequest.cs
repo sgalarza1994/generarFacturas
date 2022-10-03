@@ -4,16 +4,16 @@ namespace ViewModel.User
 {
     public  class CreateUserRequest
     {
-        [Validator(true, 100)]
+        [Validator(true, 5)]
         public string Email { get; set; }
 
-        [Validator(true, 100)]
+        [Validator(true, 5)]
         public string Password { get; set; }
 
-        [Validator(true, 100)]
+        [Validator(true, 5)]
         public string FirstName { get; set; }
 
-        [Validator(true, 100)]
+        [Validator(true, 5)]
         public string LastName { get; set; }
 
      

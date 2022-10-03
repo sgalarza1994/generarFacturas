@@ -8,7 +8,10 @@ const routes: Routes = [
   component : HomeComponent,
   children:
   [
-
+    {
+      path: 'auth',
+      loadChildren:() =>import('./auth/auth.module').then(x=>x.AuthModule)
+    }
   ]
  }
 

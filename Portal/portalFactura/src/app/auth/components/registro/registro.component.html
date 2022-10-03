@@ -1,0 +1,53 @@
+
+<div class="container example-container">
+<mat-stepper #stepper>
+  <mat-step [stepControl]="formRegistro" errorMessage="Name is required.">
+    <form [formGroup]="formRegistro">
+      <ng-template matStepLabel>Datos Empresa</ng-template>
+      <mat-form-field >
+        <mat-label>Nombres</mat-label>
+        <input matInput placeholder="Nombres" formControlName="firstName" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Apellidos</mat-label>
+        <input matInput placeholder="Apellidos" formControlName="lastName" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Telefono</mat-label>
+        <input matInput placeholder="Telefono" formControlName="phone">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Direccion</mat-label>
+        <input matInput placeholder="Direccion" formControlName="address">
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="formUsuario" errorMessage="Address is required.">
+    <form [formGroup]="formUsuario" (submit)="registrarUsuario()" >
+      <ng-template matStepLabel>Datos de Usuario</ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email"
+               required>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password"
+        type="password"
+               required>
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperPrevious>Atras</button>
+        <button [disabled]="formRegistro.invalid || formUsuario.invalid" mat-button>Registrar</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-stepper>
+</div>

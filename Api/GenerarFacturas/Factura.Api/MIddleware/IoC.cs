@@ -32,8 +32,7 @@ namespace Factura.Api.MIddleware
             {
                 builder.AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials();
+                .AllowAnyHeader();
 
 
             }));
