@@ -11,6 +11,10 @@ const routes: Routes = [
     {
       path: 'auth',
       loadChildren:() =>import('./auth/auth.module').then(x=>x.AuthModule)
+    },
+    {
+      path: 'invoice',
+      loadChildren:() =>import('./invoice/invoice.module').then(x=>x.InvoiceModule)
     }
   ]
  }

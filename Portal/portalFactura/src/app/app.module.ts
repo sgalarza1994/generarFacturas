@@ -8,6 +8,8 @@ import { HomeComponent } from './layout/home/home.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from './shared/shared.module';
 import { AppMaterialModules } from './material/material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalModule ,BsModalService} from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +22,11 @@ import { AppMaterialModules } from './material/material.module';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    ModalModule.forRoot(),
+    NgbModule
   ],
-  providers: [],
+  providers: [BsModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

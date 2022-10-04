@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
     private authService:AuthService,
     private loaderService:LoaderService,
     private toashService:ToastrService,
-    private tokenService:TokenService
+    private tokenService:TokenService,
+    private router:Router,
     ) { }
 
   ngOnInit(): void {
@@ -54,8 +55,10 @@ export class LoginComponent implements OnInit {
         {
           if(response.success)
           {
-            this.toashService.success("Vamos a iniciar sesion s");
+            
             this.tokenService.saveAuthorize(response.result);
+            this.authService.notificarLogin();
+            this.router.navigate(['invoice'])
           }
           else
           {

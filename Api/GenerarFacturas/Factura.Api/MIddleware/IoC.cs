@@ -1,4 +1,5 @@
 ﻿using LayerAccess;
+using LayerBusiness.Home;
 using LayerBusiness.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,8 +19,10 @@ namespace Factura.Api.MIddleware
             services.AddDbContext<InvoiceContext>(options => options.UseSqlServer(configuration.GetConnectionString("Default")));
 
 
-            services.AddTransient<IUserService, UserService>();
-  
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<IInvoiceService, InvoiceService>();
+            services.AddScoped<IInvoiceDetailService, InvoiceDetailService>();
             return services;
         }
 
