@@ -4,16 +4,20 @@ import { HomeComponent } from './components/home/home.component';
 import { AppMaterialModules } from '../material/material.module';
 import { InvoiceRoutingModule } from './invoice-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CompanyComponent } from './components/company/company.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    CompanyComponent
   ],
   imports: [
     CommonModule,
     InvoiceRoutingModule,
     AppMaterialModules,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule
   ]
 })
 export class InvoiceModule { }

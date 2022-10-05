@@ -37,6 +37,7 @@ namespace LayerBusiness.Home
             company.Address = request.Address;
             company.Email = request.Email;
             company.Phone = request.Phone;
+            company.Ruc = request.Ruc;
 
             await Database.SaveChangesAsync();
             return new Response { Success = true, Message = "Proceso exitoso" };

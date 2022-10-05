@@ -15,12 +15,14 @@ namespace Factura.Api.Controllers
     [ApiController]
     public class InvoiceController : ControllerBase
     {
-        public InvoiceController(IInvoiceService invoiceService)
+        public InvoiceController(IInvoiceService invoiceService,IPdfService pdfService)
         {
             InvoiceService = invoiceService;
+            PdfService = pdfService;
         }
 
         public IInvoiceService InvoiceService { get; }
+        public IPdfService PdfService { get; }
 
         [HttpGet("[action]/{userId}/{isAdmin}")]
         public async Task<ActionResult<Response<List<InvoiceResponse>>>> GetInvoices(int userId, bool isAdmin)
@@ -59,6 +61,12 @@ namespace Factura.Api.Controllers
 
             }
             return Ok(response);
+        }
+
+        [HttpGet("[action]/{invoiceId}")]
+        public async Task<ActionResult<Response>> GenerarPdf(int invoiceId)
+        {
+            return Ok(await PdfService.GenerarPdf(invoiceId));
         }
     }
 }

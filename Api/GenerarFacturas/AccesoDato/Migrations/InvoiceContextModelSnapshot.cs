@@ -38,6 +38,9 @@ namespace LayerAccess.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("varchar(20)");
 
+                    b.Property<string>("Ruc")
+                        .HasColumnType("varchar(20)");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 

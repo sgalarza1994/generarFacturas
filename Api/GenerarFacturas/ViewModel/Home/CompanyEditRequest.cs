@@ -15,5 +15,7 @@ namespace ViewModel.Home
 
         public string Phone { get; set; }
         public string Email { get; set; }
+
+        public string Ruc { get; set; }
     }
 }

@@ -20,5 +20,8 @@ export class InvoiceService {
     let url = `invoice/getInvoices/${userId}/${isAdmin}`;
     return this.http.get(url);
   }
-
+  getPdf(invoiceId:number) :Observable<Response>
+  {
+    return this.http.get(`invoice/generarPdf/${invoiceId}`);
+  }
 }

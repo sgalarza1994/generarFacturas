@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit,OnDestroy {
     {
       this.router.navigate(['auth']);
     }
-    else 
+    else
     {
       this.router.navigate(["invoice"]);
     }
@@ -41,6 +41,10 @@ export class HeaderComponent implements OnInit,OnDestroy {
 
   ngOnDestroy(): void {
     this.suscripcionUsuario.unsubscribe();
+  }
+  navegacion()
+  {
+    this.router.navigate(["invoice/company"]);
   }
 
 }

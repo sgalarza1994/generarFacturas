@@ -23,6 +23,7 @@ namespace Factura.Api.MIddleware
             services.AddScoped<ICompanyService, CompanyService>();
             services.AddScoped<IInvoiceService, InvoiceService>();
             services.AddScoped<IInvoiceDetailService, InvoiceDetailService>();
+            services.AddScoped<IPdfService, PdfService>();
             return services;
         }
 

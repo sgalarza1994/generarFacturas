@@ -29,6 +29,8 @@ namespace LayerAccess.Admin
 
         public User User { get; set; }
 
+        [Column(TypeName = "varchar(20)")]
+        public string Ruc { get; set; }
         public List<Invoice> Invoices { get; set; }
     }
 }

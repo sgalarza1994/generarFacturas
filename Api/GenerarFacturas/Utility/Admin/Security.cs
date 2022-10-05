@@ -14,6 +14,15 @@ namespace Utility.Admin
 {
     public static class Security
     {
+
+
+        public static string ConvertBase64Ruta(string path)
+        {
+            byte[] imageArray = System.IO.File.ReadAllBytes(path);
+            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+            return base64ImageRepresentation;
+
+        }
         public static Tuple<byte[], string> Generatehashed(string password)
         {
             var salt = GenerateSalt();
